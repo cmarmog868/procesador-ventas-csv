@@ -1,0 +1,9 @@
+fecha,producto,categoria,cantidad,precio
+2026-01-05,Teclado,Perifericos,3,25.50
+2026-01-06, ratón ,perifericos,5,12.90
+2026-01-07,Monitor,Pantallas,2,189.99
+2026-01-07,Monitor,pantallas,,189.99
+2026-01-08,Portátil,Ordenadores,1,749.00
+2026-01-09,TECLADO,Perifericos,4,25.50
+,,,,
+2026-01-10,Auricular,Audio,6,34.95
