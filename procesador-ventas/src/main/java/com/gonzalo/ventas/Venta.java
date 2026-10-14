@@ -1,5 +1,6 @@
 package com.gonzalo.ventas;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
 public class Venta {
@@ -7,9 +8,9 @@ public class Venta {
     private final String producto;
     private final String categoria;
     private final int cantidad;
-    private final double precio;
+    private final BigDecimal precio;
 
-    public Venta(LocalDate fecha, String producto, String categoria, int cantidad, double precio) {
+    public Venta(LocalDate fecha, String producto, String categoria, int cantidad, BigDecimal precio) {
         this.fecha = fecha;
         this.producto = producto;
         this.categoria = categoria;
@@ -21,10 +22,10 @@ public class Venta {
     public String getProducto() { return producto; }
     public String getCategoria() { return categoria; }
     public int getCantidad() { return cantidad; }
-    public double getPrecio() { return precio; }
+    public BigDecimal getPrecio() { return precio; }
 
-    public double getTotal() {
-        return cantidad * precio;
+    public BigDecimal getTotal() {
+        return precio.multiply(BigDecimal.valueOf(cantidad));
     }
 
     @Override

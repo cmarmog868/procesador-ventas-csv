@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -46,7 +47,7 @@ public class LectorCsv {
             String producto = capitalizar(fila[1]);
             String categoria = capitalizar(fila[2]);
             int cantidad = Integer.parseInt(fila[3].trim());
-            double precio = Double.parseDouble(fila[4].trim());
+            BigDecimal precio = new BigDecimal(fila[4].trim());
             return new Venta(fecha, producto, categoria, cantidad, precio);
         } catch (Exception e) {
             return null; // fila vacía o con datos inválidos
